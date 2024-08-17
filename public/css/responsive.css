@@ -1,0 +1,1007 @@
+/* ##################### 1025px to 1200px ###################### */
+@media (min-width: 1025px) and (max-width: 1200px) {
+    body {
+        /* background-color: red; */
+    }
+
+    /* Hero section */
+    .infoBox {
+        width: 90%;
+    }
+
+    /* cardsSections */
+    .cardsSections {
+        position: relative;
+        width: 100%;
+    }
+
+    .cards {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .customers {
+
+        width: 80%;
+        box-shadow: 2px 2px 5px grey;
+        margin: auto;
+    }
+
+    .Installation,
+    .Maintenance,
+    .Consultation {
+        width: 29%;
+    }
+
+    /* AboutSection */
+
+    .aboutus {
+        bottom: -630px;
+        padding: 1rem 2rem;
+    }
+
+    .text-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        justify-content: center;
+        gap: 1rem;
+        width: 49%;
+        padding: 0 1rem 0 0rem;
+    }
+
+    .images {
+        width: 49%;
+        position: relative;
+    }
+
+    .textmsgbox {
+        padding: 1rem 1rem;
+        width: 50%;
+        top: 49%;
+        right: 55%;
+    }
+
+    .textmsgbox h1 {
+        font-size: 1.2rem;
+        word-spacing: 3px;
+    }
+
+    /* services */
+    .servicesSection {
+        width: 100%;
+        position: relative;
+        bottom: -635px;
+        padding: 2rem;
+    }
+
+    .service {
+        width: 30%;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 2px 2px 5px grey, inset 2px 2px 5px rgb(54, 54, 54);
+    }
+
+    /* projects */
+    .projectsection {
+        bottom: -650px;
+        padding: 1rem;
+    }
+
+    .projectscards .projcts {
+        gap: 1rem;
+        overflow: hidden;
+        padding: 2rem 2rem;
+    }
+
+    .projcts .textbox {
+        width: 50%;
+        padding: 0rem;
+        text-align: center;
+    }
+
+    /* contactUs */
+    .contactsection {
+
+        bottom: -628px;
+        padding: 2rem;
+    }
+
+    /* footer */
+    footer {
+        margin-top: 610px;
+        padding: 3rem 1rem;
+    }
+
+    footer .companyInfo {
+        width: 90%;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+}
+
+/* ##################### 769px to 1024px ####################### */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+
+    body {
+        /* background-color: red; */
+    }
+
+
+    header {
+        width: 100%;
+        display: flex;
+        padding: 1rem 1rem;
+        gap: 2rem;
+        align-items: center;
+        justify-content: end;
+    }
+
+
+    /* Hero section */
+    .infoBox {
+        width: 90%;
+    }
+
+    /* cardsSections */
+    .cardsSections {
+        position: relative;
+        width: 100%;
+    }
+
+    .cards {
+        width: 100%;
+        flex-wrap: wrap;
+        top: -77px;
+    }
+
+    .customers {
+
+        width: 80%;
+        box-shadow: 2px 2px 5px grey;
+        margin: auto;
+    }
+
+    .Installation,
+    .Maintenance,
+    .Consultation {
+        width: 29%;
+    }
+
+    /* AboutSection */
+
+    .aboutus {
+        bottom: -812px;
+        padding: 1rem 2rem;
+    }
+
+    .text-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        justify-content: center;
+        gap: 1rem;
+        width: 67%;
+        padding: 0 1rem 0 0rem;
+    }
+
+    .images {
+        width: 49%;
+        position: relative;
+        top: -23%;
+    }
+
+    .textmsgbox {
+        padding: 1rem 1rem;
+        width: 100%;
+        top: 150%;
+        right: 0%;
+    }
+
+    .textmsgbox h1 {
+        font-size: 1.2rem;
+        word-spacing: 3px;
+    }
+
+    /* services */
+    .servicesSection {
+        width: 100%;
+        position: relative;
+        bottom: -821px;
+        padding: 1rem;
+    }
+
+    .service {
+        width: 30%;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 2px 2px 5px grey, inset 2px 2px 5px rgb(54, 54, 54);
+    }
+
+    /* projects */
+    .projectsection {
+        bottom: -845px;
+        padding: 1rem;
+    }
+
+    .projectscards .projcts {
+        gap: 1rem;
+        overflow: hidden;
+        padding: 2rem 2rem;
+    }
+
+    .projcts .textbox {
+        width: 50%;
+        padding: 0rem;
+        text-align: center;
+    }
+
+    /* contactUs */
+    .contactsection {
+        bottom: -838px;
+        padding: 2rem;
+    }
+
+    .contactsection .topText {
+
+        width: 95%;
+
+    }
+
+    .contactForm form input,
+    textarea {
+        width: 100%;
+
+    }
+
+    /* footer */
+    footer {
+        margin-top: 797px;
+        padding: 3rem 1rem;
+    }
+
+    footer .companyInfo {
+        width: 90%;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+}
+
+/* ##################### 481px to 768px ####################### */
+@media (min-width: 481px) and (max-width: 768px) {
+    * {
+        font-size: 80%;
+    }
+
+    body {
+        /* background-color: rgb(0, 238, 255); */
+
+    }
+
+
+    header {
+        width: 100%;
+        display: flex;
+        padding: 2rem 1rem;
+        gap: 2rem;
+        align-items: center;
+        justify-content: end;
+        flex-direction: column;
+    }
+
+
+    /* Hero section */
+    .infoBox {
+        width: 90%;
+    }
+
+    .buttonsBox {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .discovermore {
+        color: rgb(0 0 0);
+        border: 2px solid grey;
+    }
+
+    /* cardsSections */
+    .cardsSections {
+        position: relative;
+        width: 100%;
+    }
+
+    .cards {
+        width: 100%;
+        flex-wrap: wrap;
+        top: -33px;
+    }
+
+    .customers {
+
+        width: 80%;
+        box-shadow: 2px 2px 5px grey;
+        margin: auto;
+    }
+
+    .Installation,
+    .Maintenance,
+    .Consultation {
+        width: 80%;
+        font-size: 2.5rem;
+    }
+
+    /* AboutSection */
+
+    .aboutus {
+        bottom: -1266px;
+        padding: 0rem 0rem;
+        /* border: 2px solid red; */
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        gap: 1.5rem;
+        height: 90vh;
+        background-color: #F1F1F1;
+    }
+
+    .text-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        justify-content: center;
+        gap: 2rem;
+        width: 90%;
+        padding: 0rem 0rem;
+        position: relative;
+        top: 3rem;
+    }
+
+    .images {
+        width: 90%;
+        position: relative;
+        top: 9%;
+
+    }
+
+    .textmsgbox {
+        padding: 1rem 1rem;
+        width: 58%;
+        top: 77%;
+        right: 21%;
+    }
+
+    .textmsgbox h1 {
+        font-size: 1.2rem;
+        word-spacing: 3px;
+    }
+
+    /* services */
+    .servicesSection {
+        width: 100%;
+        position: relative;
+        bottom: -1506px;
+        padding: 1rem;
+    }
+
+    .service {
+        width: 90%;
+        border-radius: 8px;
+        overflow: hidden;
+
+    }
+
+    .service .textArea p {
+        font-size: 1rem;
+        color: #5f5f5f;
+        padding-bottom: 1.5rem;
+    }
+
+    .service .textArea .btn {
+
+        font-size: 1.5rem;
+    }
+
+    .service .textArea h1 {
+        font-size: 2.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    /* projects */
+    .projectsection {
+        bottom: -1533px;
+        padding: 1rem;
+
+    }
+
+    .projectscards .projcts {
+        gap: 1rem;
+        overflow: hidden;
+        padding: 1rem 1rem;
+        flex-direction: column;
+    }
+
+    .projcts .textbox {
+        width: 100%;
+        padding: 0rem;
+        text-align: left;
+    }
+
+    .servicesCards {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+    }
+
+    .projcts .image {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projectscards .projcts.row-revers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* contactUs */
+    .contactsection {
+        bottom: -1523px;
+        padding: 1rem;
+    }
+
+    .contactsection .topText {
+
+        width: 95%;
+
+    }
+
+    .contactForm form input,
+    textarea {
+        width: 100%;
+
+    }
+
+    /* footer */
+    footer {
+        margin-top: 1516px;
+        padding: 2rem 1rem;
+    }
+
+    footer .companyInfo {
+        width: 90%;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
+
+/* ##################### 320px to 480px ####################### */
+@media (min-width: 320px) and (max-width: 510px) {
+    * {
+        font-size: 67%;
+    }
+
+    body {
+        /* background-color: rgb(0, 238, 255); */
+
+    }
+
+
+
+    header {
+        width: 100%;
+        display: flex;
+        padding: 2rem 1rem;
+        gap: 2rem;
+        align-items: center;
+        justify-content: end;
+        flex-direction: column;
+    }
+
+
+    /* Hero section */
+    .infoBox {
+        width: 90%;
+    }
+
+    .buttonsBox {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .discovermore {
+        color: rgb(0 0 0);
+        border: 2px solid grey;
+    }
+
+    /* cardsSections */
+    .cardsSections {
+        position: relative;
+        width: 100%;
+    }
+
+    .cards {
+        width: 100%;
+        flex-wrap: wrap;
+        top: 91px;
+    }
+
+    .customers {
+
+        width: 80%;
+        box-shadow: 2px 2px 5px grey;
+        margin: auto;
+    }
+
+    .Installation,
+    .Maintenance,
+    .Consultation {
+        width: 80%;
+        font-size: 2.5rem;
+    }
+
+    /* AboutSection */
+
+    .aboutus {
+        bottom: -1266px;
+        padding: 0rem 0rem;
+        /* border: 2px solid red; */
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        gap: 1.5rem;
+        height: 90vh;
+        background-color: #F1F1F1;
+    }
+
+    .text-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        justify-content: center;
+        gap: 2rem;
+        width: 90%;
+        padding: 0rem 0rem;
+        position: relative;
+        top: 3rem;
+    }
+
+    .images {
+        width: 90%;
+        position: relative;
+        top: 9%;
+
+    }
+
+    .textmsgbox {
+        padding: 1rem 1rem;
+        width: 58%;
+        top: 77%;
+        right: 21%;
+    }
+
+    .textmsgbox h1 {
+        font-size: 1.2rem;
+        word-spacing: 3px;
+    }
+
+    /* services */
+    .servicesSection {
+        width: 100%;
+        position: relative;
+        bottom: -1506px;
+        padding: 1rem;
+    }
+
+    .service {
+        width: 90%;
+        border-radius: 8px;
+        overflow: hidden;
+
+    }
+
+    .service .textArea p {
+        font-size: 1rem;
+        color: #5f5f5f;
+        padding-bottom: 1.5rem;
+    }
+
+    .service .textArea .btn {
+
+        font-size: 1.5rem;
+    }
+
+    .service .textArea h1 {
+        font-size: 2.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    /* projects */
+    .projectsection {
+        bottom: -1533px;
+        padding: 1rem;
+
+    }
+
+    .projectscards .projcts {
+        gap: 1rem;
+        overflow: hidden;
+        padding: 1rem 1rem;
+        flex-direction: column;
+    }
+
+    .projcts .textbox {
+        width: 100%;
+        padding: 0rem;
+        text-align: left;
+    }
+
+    .servicesCards {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+    }
+
+    .projcts .image {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projectscards .projcts.row-revers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* contactUs */
+    .contactsection {
+        bottom: -1523px;
+        padding: 1rem;
+    }
+
+    .contactsection .topText {
+
+        width: 95%;
+
+    }
+
+    .contactForm form input,
+    textarea {
+        width: 100%;
+
+    }
+
+    /* footer */
+    footer {
+        margin-top: 1516px;
+        padding: 2rem 1rem;
+    }
+
+    footer .companyInfo {
+        width: 90%;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+
+    .menu-icon {
+        display: block; /* Show the menu icon on small screens */
+    }
+
+    .menu-links {
+        display: none; /* Hide the menu links by default */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        width: 200px;
+        border-radius: 5px;
+    }
+
+    .menu-links.active {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .menu-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .getStarted {
+        margin-top: 10px;
+        display: block;
+        text-align: center;
+    }
+}
+
+/* jhhjhjhj */
+
+
+/* ##################### 280px to 321px ####################### */
+@media (max-width: 321px) {
+    * {
+        font-size: 80%;
+    }
+
+    body {
+        /* background-color: rgb(0, 238, 255); */
+
+    }
+
+    header {
+        width: 100%;
+        display: flex;
+        padding: 2rem 1rem;
+        gap: 2rem;
+        align-items: center;
+        justify-content: end;
+        flex-direction: column;
+    }
+
+
+    /* Hero section */
+    .infoBox {
+        width: 80%;
+    }
+
+    .buttonsBox {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .discovermore {
+        color: rgb(0 0 0);
+        border: 2px solid grey;
+    }
+
+    /* cardsSections */
+    .cardsSections {
+        position: relative;
+        width: 100%;
+    }
+
+    .cards {
+        width: 100%;
+        flex-wrap: wrap;
+        top: -33px;
+    }
+
+    .customers {
+
+        width: 80%;
+        box-shadow: 2px 2px 5px grey;
+        margin: auto;
+    }
+
+    .Installation,
+    .Maintenance,
+    .Consultation {
+        width: 80%;
+        font-size: 2.5rem;
+    }
+
+    /* AboutSection */
+
+    .aboutus {
+        bottom: -1266px;
+        padding: 0rem 0rem;
+        /* border: 2px solid red; */
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        gap: 1.5rem;
+        height: 90vh;
+        background-color: #F1F1F1;
+    }
+
+    .text-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        justify-content: center;
+        gap: 2rem;
+        width: 90%;
+        padding: 0rem 0rem;
+        position: relative;
+        top: 3rem;
+    }
+
+    .images {
+        width: 90%;
+        position: relative;
+        top: 9%;
+
+    }
+
+    .textmsgbox {
+        padding: 1rem 1rem;
+        width: 58%;
+        top: 77%;
+        right: 21%;
+    }
+
+    .textmsgbox h1 {
+        font-size: 1.2rem;
+        word-spacing: 3px;
+    }
+
+    /* services */
+    .servicesSection {
+        width: 100%;
+        position: relative;
+        bottom: -1506px;
+        padding: 1rem;
+    }
+
+    .service {
+        width: 90%;
+        border-radius: 8px;
+        overflow: hidden;
+
+    }
+
+    .service .textArea p {
+        font-size: 1rem;
+        color: #5f5f5f;
+        padding-bottom: 1.5rem;
+    }
+
+    .service .textArea .btn {
+
+        font-size: 1.5rem;
+    }
+
+    .service .textArea h1 {
+        font-size: 2.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    /* projects */
+    .projectsection {
+        bottom: -1533px;
+        padding: 1rem;
+
+    }
+
+    .projectscards .projcts {
+        gap: 1rem;
+        overflow: hidden;
+        padding: 1rem 1rem;
+        flex-direction: column;
+    }
+
+    .projcts .textbox {
+        width: 100%;
+        padding: 0rem;
+        text-align: left;
+    }
+
+    .servicesCards {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+    }
+
+    .projcts .image {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .projectscards .projcts.row-revers {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* contactUs */
+    .contactsection {
+        bottom: -1523px;
+        padding: 1rem;
+    }
+
+    .contactsection .topText {
+
+        width: 95%;
+
+    }
+
+    .contactForm form input,
+    textarea {
+        width: 100%;
+
+    }
+
+    /* footer */
+    footer {
+        margin-top: 1516px;
+        padding: 2rem 1rem;
+    }
+
+    footer .companyInfo {
+        width: 90%;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon on small screens */
+    }
+
+    .menu-links {
+        display: none; /* Hide the menu links by default */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        width: 200px;
+        border-radius: 5px;
+    }
+
+    .menu-links.active {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .menu-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .getStarted {
+        margin-top: 10px;
+        display: block;
+        text-align: center;
+    }
+}

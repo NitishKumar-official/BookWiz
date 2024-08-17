@@ -1,10 +1,9 @@
-
-
 <section class="herosection">
   <div class="topber">
       <div class="name-logo">Book <span class="Era">Wiz</span></div>
       <nav>
-          <ul>
+          <div class="menu-icon"  onclick="toggleMenu()">&#9776;</div>
+          <ul class="menu-links">
               <li><a href="/">Home</a></li>
               <li><a href="/books">Explore</a></li>
               <li><a href="#about">About us</a></li>
@@ -14,16 +13,12 @@
       </nav>
       <% if (!currUser) { %>
         <a class="getStarted"  href="/signup">SignUp/In</a>
-       <% } %>
+      <% } %>
       <% if (currUser && currUser.role == "user") { %>
         <a class="getStarted" href="/student/<%= currUser._id %>/profile">Profile</a>
       <% } %>
       <% if (currUser && currUser.role == "admin") { %>
        <a class="getStarted" href="/admin/<%= currUser._id %>/profile">Dashboard</a>
-     <% } %>
-
+      <% } %>
   </div>
-</section>   
-
-
-
+</section>

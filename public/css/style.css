@@ -34,6 +34,12 @@ body {
 
 /* -------- topber -------- */
 
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+}
+
 .topber {
     display: flex;
     align-items: center;
@@ -195,7 +201,7 @@ nav ul li a:hover::after {
     align-items: center;
     justify-content: center;
     color: white;
-    margin-top: 2rem;
+    margin-top: 6rem;
 
 }
 
@@ -210,6 +216,7 @@ nav ul li a:hover::after {
     text-align: center;
     font-weight: 700;
     letter-spacing: 1px;
+    color:rgb(8, 66, 59)
 
 }
 
@@ -220,6 +227,7 @@ nav ul li a:hover::after {
     letter-spacing: 1px;
     font-style: italic;
     padding: 2rem 3.5rem;
+    color: #0b2f58;
 }
 
 /* --------- buttonsBox --------- */
