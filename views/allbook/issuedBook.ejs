@@ -1,0 +1,123 @@
+<% layout("/layouts/boilerplate") %>
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+    .book-container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        margin-top: 2rem;
+        background-color: #f8f9fa;
+    }
+    .book-header {
+        text-align: center;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #007bff;
+        margin-bottom: 20px;
+    }
+    .book-header h3 {
+        margin-bottom: 5px;
+        color: #007bff;
+    }
+    .book-header h5 {
+        color: #6c757d;
+    }
+    .book-info h5 {
+        color: #343a40;
+        margin-top: 20px;
+    }
+    .book-info p {
+        margin-bottom: 10px;
+        color: #495057;
+    }
+    .details {
+        margin-bottom: 15px;
+    }
+    .badge-custom {
+        font-size: 14px;
+        background-color: #17a2b8;
+        color: white;
+        margin-right: 5px;
+    }
+    .action-buttons {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .action-buttons .btn {
+        margin: 5px;
+    }
+    .fine-section {
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid #dee2e6;
+    }
+</style>
+
+<div class="container">
+    <div class="book-container">
+        <div class="book-header">
+            <h3><%= book.title %></h3>
+            <h5><%= book.subtitle %></h5>
+        </div>
+        <div class="book-info">
+            <h5>Description</h5>
+            <p><%= book.description %></p>
+            <h5>Details</h5>
+            <div class="row details">
+                <div class="col-md-6">
+                    <span class="badge badge-custom">Subject:</span>
+                    <span><%= book.subject %></span><br>
+                    <span class="badge badge-custom">Branch:</span>
+                    <span><%= book.branch %></span><br>
+                    <span class="badge badge-custom">Language:</span>
+                    <span><%= book.language %></span><br>
+                    <span class="badge badge-custom">Author:</span>
+                    <span><%= book.author %></span>
+                </div>
+                <div class="col-md-6">
+                    <span class="badge badge-custom">Book-ID:</span>
+                    <span><%= book.bookid %></span><br>
+                    <span class="badge badge-custom">Edition:</span>
+                    <span><%= book.edition %></span><br>
+                    <span class="badge badge-custom">Quantity:</span>
+                    <span><%= book.quantity %></span><br>
+                    <span class="badge badge-custom">Price:</span>
+                    <span><%= book.price %></span>
+                </div>
+            </div>
+            <div class="mt-3">
+                <h5>Book URL</h5>
+                <p><%= book._id %></p>
+            </div>
+            <!-- Add Issue Date, Next Renewal Date, and Fine Section -->
+            <div class="fine-section">
+                <h5>Issue Details</h5>
+                <div class="row">
+                    <div class="col-md-6">
+                        <span class="badge badge-custom">Issue Date:</span>
+                        <span><%= book.issueDate ? book.issueDate.toDateString() : 'Not Issued' %></span><br>
+                        <span class="badge badge-custom">Next Renewal Date:</span>
+                        <span><%= book.nextRenewalDate ? book.nextRenewalDate.toDateString() : 'Not Applicable' %></span><br>
+                    </div>
+                    <div class="col-md-6">
+                        <span class="badge badge-custom">Fine (if any):</span>
+                        <span><%= book.fine ? `₹${book.fine}` : 'No Fine' %></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <% if (currUser && currUser.role == "admin") { %>
+            <div class="action-buttons">
+                <form action="/books/<%= book._id %>/edit" method="get" class="d-inline-block">
+                    <button class="btn btn-primary">Edit Book Details</button>
+                </form>
+                <form action="/books/<%= book._id %>?_method=DELETE" method="post" class="d-inline-block">
+                    <button class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        <% } %>
+    </div>
+</div>

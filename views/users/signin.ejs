@@ -1,0 +1,50 @@
+<% layout("/layouts/boilerplate") %>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+<div class="container mt-5">
+    <h2 class="text-center">Sign In</h2>
+    <ul class="nav nav-tabs" id="loginTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="student-tab" data-toggle="tab" href="#student" role="tab" aria-controls="student" aria-selected="true">Student Login</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" id="admin-tab" data-toggle="tab" href="#admin" role="tab" aria-controls="admin" aria-selected="false">Admin Login</a>
+            </li>
+ 
+    </ul>
+    <div class="tab-content" id="loginTabContent">
+        <div class="tab-pane fade show active" id="student" role="tabpanel" aria-labelledby="student-tab">
+            <form id="studentLoginForm" class="mt-3" action="/signin" method="post" novalidate>
+                <div class="form-group">
+                    <label for="studentRegNo">Student Registration No:</label>
+                    <input type="text" class="form-control" name="username" id="studentRegNo" placeholder="Enter your registration number" required>
+                </div>
+                <div class="form-group">
+                    <label for="studentPassword">Password:</label>
+                    <input type="password" name="password" class="form-control" id="studentPassword" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="admin" role="tabpanel" aria-labelledby="admin-tab">
+            <form id="adminLoginForm" class="mt-3" action="/signin" method="post" novalidate>
+                <div class="form-group">
+                    <label for="adminId">Admin Username:</label>
+                    <input type="text" class="form-control" name="username" id="adminId" placeholder="Enter your admin ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Password:</label>
+                    <input type="password" name="password" class="form-control" id="adminPassword" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+    <div class="mt-3">
+        <a href="#" class="btn btn-link">Forgot Password?</a>
+        <a href="/signup" class="btn btn-link">Sign Up</a>
+    </div>
+</div>

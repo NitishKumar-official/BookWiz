@@ -1,0 +1,70 @@
+<% layout("/layouts/boilerplate") %>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <!-- Edit Registration Form -->
+   
+            <div class="container mt-5">
+                <h2 class="text-center">Edit Profile Details</h2>
+   
+                <form action="/student/<%= user._id %>?_method=PUT" method="post" enctype="multipart/form-data" >
+                    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" class="form-control" id="firstName" name="student[firstName]" value="<%= user.student.firstName %>" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" class="form-control" id="lastName" name="student[lastName]" value="<%= user.student.lastName %>" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="registration">Registration Number:</label>
+                            <input type="text" class="form-control" id="registration" name="student[registration]" value="<%= user.student.registration %>" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="rollNo">Roll Number:</label>
+                            <input type="text" class="form-control" id="rollNo" name="student[rollNo]" value="<%= user.student.rollNo %>" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="branch">Branch:</label>
+                            <input type="text" class="form-control" id="branch" name="student[branch]" value="<%= user.student.branch %>" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="semester">Semester:</label>
+                            <input type="text" class="form-control" id="semester" name="student[semester]" value="<%= user.student.semester %>" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="session">Session:</label>
+                            <input type="text" class="form-control" id="session" name="student[session]" value="<%= user.student.session %>" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="collegeName">College Name:</label>
+                            <input type="text" class="form-control" id="collegeName" name="student[collegeName]" value="<%= user.student.collegeName %>" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="about">About:</label>
+                            <textarea type="text" class="form-control" id="about" name="student[about]"  required><%= user.student.about %></textarea>
+                        </div>
+        
+                    </div>
+                    <div class="form-group mb-3">
+                        <div><label for="image">Uploaded Image:</label></div>
+                        <img src="<%=originalImageUrl %>" alt="">
+                    
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Upload New Image:</label>
+                        <input type="file" class="form-control-file" id="image" name="student[image]" value="" >
+                    </div>
+                    <button type="submit" class="btn btn-primary">Edit Profile</button>
+                </form>
+ 
+</div>

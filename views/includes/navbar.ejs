@@ -1,0 +1,29 @@
+
+
+<section class="herosection">
+  <div class="topber">
+      <div class="name-logo">Book <span class="Era">Wiz</span></div>
+      <nav>
+          <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/books">Explore</a></li>
+              <li><a href="#about">About us</a></li>
+              <li><a href="#service">Services</a></li>
+              <li><a href="#contact">Contact us</a></li>
+          </ul>
+      </nav>
+      <% if (!currUser) { %>
+        <a class="getStarted"  href="/signup">SignUp/In</a>
+       <% } %>
+      <% if (currUser && currUser.role == "user") { %>
+        <a class="getStarted" href="/student/<%= currUser._id %>/profile">Profile</a>
+      <% } %>
+      <% if (currUser && currUser.role == "admin") { %>
+       <a class="getStarted" href="/admin/<%= currUser._id %>/profile">Dashboard</a>
+     <% } %>
+
+  </div>
+</section>   
+
+
+

@@ -1,0 +1,103 @@
+<% layout("/layouts/boilerplate") %>
+
+
+    <div class="row row-container ">
+        <div class="col-8 offset-2">
+            <h3>Add New Book Details</h3>
+            <form action="/books" method="POST" novalidate class="needs-validation">
+                <div class="mb-3">
+                    <label for="title" class="form-lebel">Title</label>
+                    <input type="text" name="book[title]" value="" class="form-control"
+                        required />
+                    <div class="invalid-feedback">please enter valid title!</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="subtitle" class="form-lebel">Subtitle</label>
+                    <input type="text" name="book[subtitle]" value="" class="form-control"
+                        required />
+                    <div class="invalid-feedback">please enter valid subtitle!</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-lebel">Description</label>
+                    <textarea name="book[description]" value="" class="form-control"
+                        required></textarea>
+                    <div class="invalid-feedback">please enter valid description!</div>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label for="image" class="form-lebel">Image Link</label>
+                        <input type="text" name="book[image]" value="" class="form-control"
+                            required />
+                        <div class="invalid-feedback">please enter valid image url!</div>
+                    </div>
+
+                    <div class="mb-3 col-md-6">
+                        <label for="language" class="form-lebel">Language</label>
+                        <input type="text" name="book[language]" value=""
+                            class="form-control" required />
+                        <div class="invalid-feedback">please enter valid book language!</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label for="bookid" class="form-lebel">BookID</label>
+                        <input type="number" name="book[bookid]" value="" class="form-control"
+                            required />
+                        <div class="invalid-feedback">please enter valid book ID!</div>
+                    </div>
+
+                    <div class="mb-3 col-md-6">
+                        <label for="author" class="form-lebel">Author</label>
+                        <input type="text" name="book[author]" value=""
+                            class="form-control" required />
+                        <div class="invalid-feedback">please enter valid book author name!</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-6">
+                        <label for="subject" class="form-lebel">Subject</label>
+                        <input type="text" name="book[subject]" value="" class="form-control"
+                            required />
+                        <div class="invalid-feedback">please enter valid subject!</div>
+                    </div>
+
+                    <div class="mb-3 col-md-6">
+                        <label for="branch" class="form-lebel">Branch</label>
+                        <input type="text" name="book[branch]" value=""
+                            class="form-control" required />
+                        <div class="invalid-feedback">please enter valid branch!</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="price" class="form-lebel">Price</label>
+                        <input type="number" name="book[price]" value="" class="form-control"
+                            required />
+                        <div class="invalid-feedback">please enter valid price!</div>
+                    </div>
+
+                    <div class="mb-3 col-md-4">
+                        <label for="quantity" class="form-lebel">Quantity</label>
+                        <input type="number" name="book[quantity]" value=""
+                            class="form-control" required />
+                        <div class="invalid-feedback">please enter valid Quantity!</div>
+                    </div>
+                    <div class="mb-3 col-md-4">
+                        <label for="edition" class="form-lebel">Edition</label>
+                        <input type="number" name="book[edition]" value="" class="form-control"
+                            required />
+                        <div class="invalid-feedback">please enter valid location!</div>
+                    </div>
+                </div>
+                <button class="btn btn-dark edit-btn">Add Book</button>
+            </form>
+        </div>
+    </div> 
+
+

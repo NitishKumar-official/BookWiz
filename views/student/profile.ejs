@@ -1,0 +1,231 @@
+
+<% layout("/layouts/boilerplate") %>
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+    #sidebar-wrapper {
+      min-height: 100vh;
+      margin-left: -13rem;
+      transition: margin 0.25s ease-out;
+    }
+    #sidebar-wrapper .list-group {
+      width: 20.7rem;
+    }
+    #page-content-wrapper {
+      min-width: 107.2%;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+      margin-left: 0;
+    }
+    .navbar {
+      padding: 1rem;
+      
+    }
+    .nav-item {
+      margin-right: 1rem;
+    }
+  </style>
+
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Dashboard</div>
+      <div class="list-group list-group-flush">
+        <a href="#profile" class="list-group-item list-group-item-action bg-light">Profile</a>
+        <% if (!user.student) { %>
+          <a href="/student/<%= user.id %>/register" class="list-group-item list-group-item-action bg-light">Register Here</a>
+        <% } %>
+        <a href="/student/<%= user.id %>/edit" class="list-group-item list-group-item-action bg-light">Edit Profile</a>
+        <% if (currUser.student) { %>
+          <a href="#" class="list-group-item list-group-item-action bg-light">Registered Already</a>
+        <% } %>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <% if (currUser.admin) { %>
+          <form action="">
+            <button class="btn btn-danger">Delete Student</button>
+          </form>
+        <% } %>
+        <div class="ml-auto">
+          <span id="username" class="mr-3">Welcome, <%= user.username %></span>
+          <a href="/logout" class="btn btn-danger" id="logout-btn">Logout</a>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div id="profile">
+          <% if (user.student) { %>
+            <div class="container mt-5">
+              <h2 class="text-center">Student Profile</h2>
+              <div class="card">
+                <div class="card-header">
+                  <h3><%= user.student.firstName %> <%= user.student.lastName %></h3>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <img src="<%= user.student.image.url %>" alt="Profile Image" class="img-thumbnail">
+                    </div>
+                    <div class="col-md-8">
+                      <table class="table table-bordered">
+                        <tbody>
+                          <tr>
+                            <th scope="row">Registration Number</th>
+                            <td><%= user.student.registration %></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Roll Number</th>
+                            <td><%= user.student.rollNo %></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Branch</th>
+                            <td><%= user.student.branch %></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Semester</th>
+                            <td><%= user.student.semester %></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">Session</th>
+                            <td><%= user.student.session %></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">College Name</th>
+                            <td><%= user.student.collegeName %></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">About</th>
+                            <td><%= user.student.about %></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+
+        <% if (user.student) { %>
+          <div class="container mt-5">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link" id="edit-tab" data-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="false">Edit Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="issueBooks-tab" data-toggle="tab" href="#issueBooks" role="tab" aria-controls="issueBooks" aria-selected="true">Issued Books</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" id="bookCart-tab" data-toggle="tab" href="#bookCart" role="tab" aria-controls="bookCart" aria-selected="true">Book Cart</a>
+              </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <!-- Issued Books -->
+              <div class="tab-pane fade" id="issueBooks" role="tabpanel" aria-labelledby="issueBooks-tab">
+                <!-- Add issued books content here -->
+                <div class="col-md-8">
+                  <h5 class="card-title">Book List</h5>
+                  <ul class="list-group">
+
+                      <% for( let index = 0; index <user.student.bookIssue.length ; index++ ) { %>
+                        <li class="list-group-item">
+                          <a href="/books/<%= user.student.bookIssue[index].id %>"><%= user.student.bookIssue[index].title %> </a>
+                          <form action="/books/<%= user.student.bookIssue[index].id %>/issuedBook" method="get">
+                            <button class="btn btn-danger btn-sm float-right ms-2 ">Details</button>
+                          </form>
+
+                          <% if (currUser && currUser.role == "admin") { %>
+
+                          <form action="/books/<%= user.student.bookIssue[index].id %>/renew" method="post">
+                            <button class="btn btn-success btn-sm float-right ms-2 ">Renew</button>
+                          </form>
+                          <form action="/books/<%= user.student.bookIssue[index].id %>/return" method="post">
+                            <button class="btn btn-primary btn-sm float-right ">Return</button>
+                          </form>
+                          <% } %>
+                        </li>
+                      
+                      <% } %>  
+                     
+                    
+                  </ul>
+                </div>
+                 
+              </div>
+
+              <!-- Edit Profile -->
+              <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
+                <h6 class="mt-3">Edit Your Profile</h6>
+                <!-- Add edit profile content here -->
+                <a href="/student/<%= user.id %>/edit" class="btn btn-danger" id="">Click Here</a>
+              </div>
+
+              <!-- Book Cart -->
+              <div class="tab-pane fade show active" id="bookCart" role="tabpanel" aria-labelledby="bookCart-tab">
+                <h2>Your Book Cart</h2>
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <h5 class="card-title">Book List</h5>
+                        <ul class="list-group">
+                          <!-- Dynamically list books added to the cart -->
+                        <% for( let index = 0; index <user.student.cart.length ; index++ ) { %>
+                          <li class="list-group-item">
+                            <a href="/books/<%= user.student.cart[index].id %>"><%= user.student.cart[index].title %> </a>
+                            <p><%=user.student.cart[index].status  %></p>
+                            <% if (currUser && currUser.role == "admin") { %>
+                            <form action="/books/<%= user.student.cart[index].id %>/issue" method="post">
+                              <button class="btn btn-danger btn-sm float-right ms-2 ">Issue</button>
+                            </form>
+                            <% } %>
+
+                            <% if (currUser && currUser.role == "user") { %>
+                            <form action="/books/<%= user.student.cart[index].id %>/remove" method="post">
+                              <button class="btn btn-success btn-sm float-right ">Remove</button>
+                            </form>
+                            <% } %>
+                          </li>
+                        
+                        <% } %>   
+
+
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-4">
+                        <h5 class="card-title">Add a Book</h5>
+                        <form>
+                          <div class="form-group">
+                            <label for="bookTitle">Book Title</label>
+                            <input type="text" class="form-control" id="bookTitle" placeholder="Enter book title">
+                          </div>
+                          <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+  </div>
+  <!-- /#wrapper -->
+
+

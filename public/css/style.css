@@ -1,0 +1,798 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-size: 62.5%;
+    /* width: 100%; */
+    font-family: 'Poppins', sans-serif;
+    
+    
+}
+.mainContainer {
+    overflow: hidden;
+}
+
+/* navbar */
+
+/* ------------------ herosection ------------------ */
+
+.herosection {
+    width: 100%;
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+
+}
+
+/* -------- topber -------- */
+
+.topber {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    background-color: #000000;
+    color: white;
+    padding: 1.2rem 2rem;
+}
+
+.topber nav ul{
+    padding-top:1rem ;
+}
+
+.topber nav ul li a{
+    text-decoration: none;
+}
+
+.name-logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.topber .Era {
+    font-weight: 300;
+    color: #7FB240;
+    letter-spacing: 1px;
+}
+
+.topber .btn {
+    background-color: #7FB240;
+    color: white;
+    padding: 0.5rem 0.8rem;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px grey;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.topber .btn:hover {
+    transform: scale(1.1);
+}
+
+/* -------- hero -------- */
+
+.hero {
+    background-image: url("/public/images/bg14.jpg");
+    width: 100% !important;
+    height: 120vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+    
+    
+   
+
+}
+
+ /* .hero::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(145, 142, 142, 0.253);
+    display: block;
+    top: 0;
+
+   
+}   */
+
+
+
+/* -------- nav -------- */
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+nav ul li a::after {
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 0%;
+    height: 4px;
+    background-color: #7FB240;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #7FB240;
+    transition: 0.3s ease;
+
+}
+
+nav ul li a:hover::after {
+    width: 80%;
+    transition: all 0.3s ease-in-out;
+}
+
+.getStarted {
+    background-color: #F6D707;
+    color: rgb(34, 34, 34);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.getStarted:hover {
+    background-color: #0b2f58;
+    color: white;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+/* navbar end here */
+
+/*---------------------- home page start----------------------------- */
+/* ----------------- textInfoBox ----------------- */
+
+.infoBox {
+    /* border: 2px solid red; */
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0rem;
+    
+
+}
+
+/* ---------- textInfoBox ---------- */
+
+.textInfoBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 2rem;
+
+}
+
+.textInfoBox h3 {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.textInfoBox h1 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+}
+
+.textInfoBox p {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-style: italic;
+    padding: 2rem 3.5rem;
+}
+
+/* --------- buttonsBox --------- */
+
+.buttonsBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bbtn {
+    font-size: 2rem;
+    padding: 0.7rem 4rem;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    background-color: #F6D707;
+    color: rgb(26, 26, 26);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.bbtn:hover {
+    background-color: #0b2f58;
+    transition: 0.3s ease;
+    color: rgb(255, 255, 255);
+}
+
+.discovermore {
+    font-size: 2rem;
+    padding: 0.7rem 4rem;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.discovermore:hover {
+    background-color: #0b2f58;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* ------------------------ cardsSections ------------------------*/
+
+.cardsSections {
+    position: relative;
+}
+
+
+.cards {
+    display: flex;
+    gap: 2rem;
+    background-color: rgb(246 246 246 / 10%);
+    /* border: 2px solid red; */
+    justify-content: center;
+    align-items: end;
+    position: absolute;
+    top: -208px;
+
+
+}
+
+.customers {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b2f58;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    padding: 3rem 2rem 3rem 2rem;
+    border-radius: 8px;
+    width: 28%;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.customers .boldText {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.fa-users {
+    font-size: 2rem;
+}
+
+.Installation {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+    padding: 2rem 1rem;
+    width: 18%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.fa-computer,
+.fa-building,
+.fa-network-wired,
+.fa-car,.fa-book {
+    font-size: 2rem;
+}
+
+.Maintenance {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+    padding: 2rem 1rem;
+    width: 18%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px grey;
+}
+
+
+
+.Consultation {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+    padding: 2rem 1rem;
+    width: 18%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px grey;
+}
+
+.cards .cards-p {
+    font-size: 0.9rem;
+    color: rgb(54, 54, 54);
+}
+
+.cards .learnmore {
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.cards .learnmore:hover {
+    background-color: #0b2f58;
+    transition: 0.3s ease;
+    color: white;
+}
+
+/* ---------------------- aboutus ----------------------  */
+
+.aboutus {
+    /* border: 2px solid red; */
+    position: relative;
+    bottom: -320px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 3rem;
+    margin: auto;
+    height: 90vh;
+    background-color: #F1F1F1;
+
+}
+
+.text-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+    gap: 1rem;
+    width: 60%;
+    padding: 0 9rem 0 4rem;
+}
+
+.text-btns .intro {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #7FB240;
+
+}
+
+.text-btns .hardText {
+    font-size: 2rem;
+    color: #0b2f58;
+
+}
+
+.text-btns p {
+    font-size: 1.1rem;
+    color: #5f5f5f;
+}
+
+.images {
+    width: 40%;
+    position: relative;
+}
+
+.images img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgb(140, 137, 137);
+}
+
+/* ------ textmsgbox ------ */
+
+.textmsgbox {
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    width: 50%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px gray;
+    top: 60%;
+    right: 60%;
+}
+
+.fa-bolt {
+    color: #7FB240;
+    font-size: 2rem;
+}
+
+.textmsgbox p {
+    color: #7FB240;
+    font-size: 1rem;
+}
+
+.textmsgbox h1 {
+    font-size: 1.5rem;
+    color: #1A3240;
+    text-align: center;
+}
+
+
+/* ------------------ servicesCards ------------------  */
+
+
+.servicesSection {
+    width: 100%;
+    position: relative;
+    bottom: -380px;
+    padding: 2rem;
+}
+
+.servicesCards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.service {
+    width: 25%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px grey, inset 2px 2px 5px rgb(54, 54, 54);
+
+
+}
+
+.service .image {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service .image img {
+    width: 100%;
+    transition: 0.3s ease;
+    object-fit: cover;
+    /* border: 2px solid red; */
+}
+
+.service:hover.service .image img {
+    transform: scale(1.2);
+    transition: 0.3s ease;
+}
+
+.service .textArea {
+    padding: 0.5rem 1.5rem;
+}
+
+.service .textArea h1 {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.service:hover.service .textArea h1 {
+    color: #0b2f58;
+}
+
+.service .textArea p {
+    font-size: 0.8rem;
+    color: #5f5f5f;
+    padding-bottom: 1.5rem;
+}
+
+.service .textArea .btn {
+    background-color: #0b2f58;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    /* padding-bottom: 0.5rem; */
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.service .textArea .btn:hover {
+    background-color: #2b6a8f;
+    transition: 0.3s;
+}
+
+/* ----------------- projectsection -----------------*/
+
+.projectsection {
+    width: 100%;
+    /* border: 2px solid red; */
+    position: relative;
+    background-color: #F1F1F1;
+    bottom: -438px;
+    padding: 3rem;
+}
+
+.projectscards {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    /* border: 2px solid green; */
+}
+
+.projectscards .projcts {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid rgb(194, 0, 237); */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 2px 2px 5px grey;
+
+}
+
+.projcts .textbox {
+    width: 50%;
+    padding: 2rem;
+}
+
+.projcts .textbox h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #0b2f58;
+}
+
+.projcts .textbox p {
+    font-size: 1rem;
+    color: #5f5f5f;
+    margin-bottom: 2rem;
+    /* text-align: center; */
+}
+
+.projcts .image {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.projcts .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.projectscards .projcts.row-revers {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----------------- contactsection ----------------- */
+
+.contactsection {
+    width: 100%;
+    position: relative;
+    /* border: 2px solid red; */
+    bottom: -440px;
+    padding: 2rem;
+}
+
+.contactsection .topText {
+    /* border: 2px solid green; */
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+
+.contactsection .topText h1 {
+    font-size: 2.5rem;
+    color: #0b2f58;
+    position: relative;
+}
+
+.contactsection .topText h1::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #1A3240;
+
+}
+
+.contactsection .topText p {
+    font-size: 1rem;
+    color: #5f5f5f;
+    padding-bottom: 1rem;
+    font-weight: 200;
+    margin-top: 1rem;
+}
+
+
+
+
+/* footer */
+/* ------------------ footer ------------------ */
+footer {
+    position: relative;
+    width: 100%;
+    /* border: 2px solid red; */
+    /* bottom: -450px; */
+    background-color: #0b2f58;
+    color: white;
+    padding: 3rem;
+    /* top: 420px; */
+    margin-top: 423px;
+}
+
+footer .companyInfo {
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 95%;
+    margin: auto;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #37434B;
+}
+
+.compinfo {
+    display: flex;
+    align-items: flex-start;
+    font-size: 1rem;
+    justify-content: center;
+    gap: 14px;
+
+}
+
+.compinfo h4 {
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.compinfo p {
+    color: #A5A5A5;
+
+}
+
+.compinfo .fa-solid {
+    font-size: 1.5rem;
+    color: #F6D707;
+}
+
+/* ----- companySocial ----- */
+
+.companySocial {
+    display: flex;
+    align-items: center;
+    /* border: 2px solid red; */
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 3rem;
+}
+
+.companySocial p {
+    font-size: 1.2rem;
+    color: #abb0b3;
+}
+
+.socialMedia .fa-brands {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+}
+
+.socialMedia .fa-brands:hover {
+    filter: drop-shadow(4px 4px 8px rgba(255, 255, 255, 0.5));
+}
+
+.fa-facebook {
+    color: #0073ff;
+
+}
+
+.fa-square-instagram {
+    color: #bc2a8d;
+
+}
+
+.fa-x-twitter {
+    color: #000000;
+
+}
+
+.fa-linkedin {
+    color: #00a6ff;
+
+}
+
+/*footer*/
+
+
+/* show page */
+
+.card-show{
+margin: 0rem 15rem !important;
+
+}
+
+.show-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+
+

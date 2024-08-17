@@ -1,0 +1,19 @@
+<% layout("/layouts/boilerplate") %>
+
+    <h1 class="card-title text-center mt-5"><b>Artificial Intelligence</b></h1>
+
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 offset-1 mt-5">   
+        <% for(let book of allBooks){%>
+                <div class="card text-bg-danger mb-3" style="max-width: 23rem;">
+                    <div class="card-header">AI</div>
+                    <div class="card-body">
+                      <h5 class="card-title"><%= book.title %></h5>
+                      <p class="card-text"><%= book.quantity%>/left</p>
+                      <a href="/books/<%= book._id %>"><button class="btn btn-light mt-5">Book Details</button> </a>
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <a href="/books/<%= book._id %>"><button class="btn btn-light mt-5">Add Cart</button> </a> 
+                    </div>
+                  </div>
+            <%}%>
+</div>
+

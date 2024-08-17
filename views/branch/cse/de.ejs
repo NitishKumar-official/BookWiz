@@ -1,0 +1,71 @@
+
+
+
+<% layout("/layouts/boilerplate") %>
+
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .card-title {
+            font-weight: bold;
+        }
+        .card-header {
+            background-color: #343a40;
+            color: white;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+        }
+        .book-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #343a40;
+        }
+        .book-quantity {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+        .btn-custom {
+            background-color: #343a40;
+            color: white;
+        }
+        .btn-custom:hover {
+            background-color: #495057;
+        }
+    </style>
+
+    <div class="container">
+        <h1 class="text-center mt-5"><b>Digital Electronics</b></h1>
+        <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-5">   
+            <% for(let book of allBooks){ %>
+                <div class="col mb-4">
+                    <div class="card h-100 text-center shadow-sm">
+                        <div class="card-header">
+                            DE
+                        </div>
+                        <div class="card-body">
+                            <h5 class="book-title"><%= book.title %></h5>
+                            <p class="book-quantity"><%= book.quantity %> left</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="/books/<%= book._id %>" class="btn btn-custom">Book Details</a>
+                            <form action="/books/<%= book._id %>/cart" method="post" class="d-inline">
+                                <button type="submit" class="btn btn-custom">Add to Cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+
+

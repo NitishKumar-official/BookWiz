@@ -1,0 +1,65 @@
+
+<% layout("/layouts/boilerplate") %>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <div class="container mt-5">
+        <h2 class="text-center">B.Tech Student Registration for Library</h2>
+        <form action="/student/<%= user._id %>/register" method="post" enctype="multipart/form-data" >
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" class="form-control" id="firstName" name="student[firstName]" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" class="form-control" id="lastName" name="student[lastName]" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="registration">Registration Number:</label>
+                    <input type="text" class="form-control" id="registration" name="student[registration]" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="rollNo">Roll Number:</label>
+                    <input type="text" class="form-control" id="rollNo" name="student[rollNo]" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="branch">Branch:</label>
+                    <input type="text" class="form-control" id="branch" name="student[branch]" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="semester">Semester:</label>
+                    <input type="text" class="form-control" id="semester" name="student[semester]" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="session">Session:</label>
+                    <input type="text" class="form-control" id="session" name="student[session]" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="collegeName">College Name:</label>
+                    <input type="text" class="form-control" id="collegeName" name="student[collegeName]" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="about">About:</label>
+                    <textarea type="text" class="form-control" id="about" name="student[about]" required></textarea>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="image">Upload Image:</label>
+                <input type="file" class="form-control-file" id="image" name="student[image]" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+
+
+ 
