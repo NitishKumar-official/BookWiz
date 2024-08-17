@@ -66,7 +66,7 @@ store.on("error",()=>{
 
 
 const sessionOption = {
-     store,              /*-------jab online update krna hoga tab iska use krenge*/
+     store,            /*  -------jab online update krna hoga tab iska use krenge*/
     secret:process.env.SECRET, 
     resave: false,
     saveUninitialized:true,
