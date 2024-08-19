@@ -37,8 +37,8 @@ const userRouter = require("./routes/user.js");
 const studentRouter = require("./routes/student.js");
 const adminRouter = require("./routes/admin.js");
 
-// const dbUrl = "mongodb://127.0.0.1:27017/Gecmunger";
-const dbUrl = process.env.ATLASDB_URL;
+const dbUrl = "mongodb://127.0.0.1:27017/Gecmunger";
+// const dbUrl = process.env.ATLASDB_URL;
 
 main()
 .then(()=>{
@@ -52,21 +52,21 @@ async function main(){
     await mongoose.connect(dbUrl);
 }
 
-const store = MongoStore.create({
-    mongoUrl:dbUrl,
-    crypto:{
-        secret:process.env.SECRET,
-    },
-    touchAfter:24*3600,
-});
+// const store = MongoStore.create({
+//     mongoUrl:dbUrl,
+//     crypto:{
+//         secret:process.env.SECRET,
+//     },
+//     touchAfter:24*3600,
+// });
 
-store.on("error",()=>{
-    console.log("ERROR in MONGO SESSION", err);
-})
+// store.on("error",()=>{
+//     console.log("ERROR in MONGO SESSION", err);
+// })
 
 
 const sessionOption = {
-     store,            /*  -------jab online update krna hoga tab iska use krenge*/
+      /*store,             -------jab online update krna hoga tab iska use krenge*/
     secret:process.env.SECRET, 
     resave: false,
     saveUninitialized:true,

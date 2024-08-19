@@ -26,7 +26,35 @@
   .nav-item {
     margin-right: 1rem;
   }
+  .nav-item a {
+    font-size: 1rem;
+  }
+
+  /* Base font size */
+  th,td, a {
+    font-size: 1rem; /* Default font size for desktop */
+  }
+
+  /* Responsive font sizes for smaller screens */
+  @media (max-width: 768px) {
+    th,td, a {
+      font-size: 0.875rem; /* Slightly smaller font size for tablets */
+    }
+  }
+
+  @media (max-width: 576px) {
+    th,td, a {
+      font-size: 0.75rem; /* Smaller font size for smartphones */
+    }
+  }
+
+  @media (max-width: 375px) {
+    th,td, a {
+      font-size: 0.6875rem; /* Even smaller font size for very small screens */
+    }
+  }
 </style>
+
 
 <div class="d-flex" id="wrapper">
 

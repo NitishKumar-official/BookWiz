@@ -48,6 +48,11 @@
     .action-buttons .btn {
         margin: 5px;
     }
+
+    .show-span span{
+        font-size: 1rem;
+        margin-top: 5px;
+}
 </style>
 
 <div class="container">
@@ -61,7 +66,7 @@
             <p><%= book.description %></p>
             <h5>Details</h5>
             <div class="row details">
-                <div class="col-md-6">
+                <div class="col-md-6 show-span">
                     <span class="badge badge-custom">Subject:</span>
                     <span><%= book.subject %></span><br>
                     <span class="badge badge-custom">Branch:</span>
@@ -71,7 +76,7 @@
                     <span class="badge badge-custom">Author:</span>
                     <span><%= book.author %></span>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 show-span">
                     <span class="badge badge-custom">Book-ID:</span>
                     <span><%= book.bookid %></span><br>
                     <span class="badge badge-custom">Edition:</span>

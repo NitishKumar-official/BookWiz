@@ -53,6 +53,10 @@
         padding-top: 15px;
         border-top: 1px solid #dee2e6;
     }
+    .show-span span{
+        font-size: 1rem;
+        margin-top: 5px;
+    }
 </style>
 
 <div class="container">
@@ -66,7 +70,7 @@
             <p><%= book.description %></p>
             <h5>Details</h5>
             <div class="row details">
-                <div class="col-md-6">
+                <div class="col-md-6 show-span">
                     <span class="badge badge-custom">Subject:</span>
                     <span><%= book.subject %></span><br>
                     <span class="badge badge-custom">Branch:</span>
@@ -76,7 +80,7 @@
                     <span class="badge badge-custom">Author:</span>
                     <span><%= book.author %></span>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 show-span">
                     <span class="badge badge-custom">Book-ID:</span>
                     <span><%= book.bookid %></span><br>
                     <span class="badge badge-custom">Edition:</span>
@@ -95,13 +99,13 @@
             <div class="fine-section">
                 <h5>Issue Details</h5>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 show-span">
                         <span class="badge badge-custom">Issue Date:</span>
                         <span><%= book.issueDate ? book.issueDate.toDateString() : 'Not Issued' %></span><br>
                         <span class="badge badge-custom">Next Renewal Date:</span>
                         <span><%= book.nextRenewalDate ? book.nextRenewalDate.toDateString() : 'Not Applicable' %></span><br>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 show-span" >
                         <span class="badge badge-custom">Fine (if any):</span>
                         <span><%= book.fine ? `₹${book.fine}` : 'No Fine' %></span>
                     </div>

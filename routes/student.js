@@ -98,6 +98,10 @@ router.post("/searchStudent",isAdminLoggedIn,  async(req, res)=>{
         path: "bookIssue",
         model: "ListBook"
     });
+    if(!student){
+        req.flash("error","student not found");
+        res.redirect("/student/search");
+    }
   
     res.render("student/searchStudent.ejs" , {student});
 })
